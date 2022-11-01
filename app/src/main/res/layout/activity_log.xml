@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/Register"
+    tools:context=".Log_Activity">
+
+    <TextView
+        android:id="@+id/textView_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:text="Привет\nHi\nやあ"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView_log"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:text="Вход"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView_hello"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/textView_hello"
+        app:layout_constraintTop_toBottomOf="@+id/textView_hello" />
+
+    <EditText
+        android:id="@+id/editText_log_name"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:background="@drawable/background_Edittext_reg_log"
+        android:textColor="@color/white"
+        android:textColorHint="#95ffffff"
+        android:hint="Как тебя зовут?"
+        android:paddingHorizontal="10dp"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_log"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/textView_log"
+        app:layout_constraintTop_toBottomOf="@+id/textView_log" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/background_Edittext_reg_log"
+        android:ems="10"
+        android:hint="Введи пароль"
+        android:inputType="textPassword"
+        android:paddingHorizontal="10dp"
+        android:text=""
+        android:textColorHint="#95FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_log_name"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/editText_log_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_log_name" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="129dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="39dp"
+        android:text="Войти"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:background="@drawable/back_button_reg_log"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="У тебя нету аккаунта"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
