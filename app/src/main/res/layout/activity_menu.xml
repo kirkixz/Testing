@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu_Activity"
-    android:background="@drawable/background_main">
+    android:background="@drawable/background_main"
+    tools:context=".Menu_Activity">
 
 
     <androidx.cardview.widget.CardView
@@ -31,6 +31,79 @@
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardView_Button_translate"
+        android:layout_width="168dp"
+        android:layout_height="275dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/back_button_reg_log"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="@+id/button_trenning"
+        app:layout_constraintTop_toBottomOf="@+id/button_trenning">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            <Button-->
+            <!--                android:id="@+id/button_translategame"-->
+            <!--                android:layout_width="169dp"-->
+            <!--                android:layout_height="274dp"-->
+            <!--                android:background="@drawable/back_button_reg_log"-->
+            <!--                android:paddingTop="180dp"-->
+            <!--                android:text="Перевод"-->
+            <!--                android:textAllCaps="false"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:visibility="gone"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_button_reg_log" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="126dp"
+                android:layout_height="54dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_translate" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Перевод"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/button_trenning"
         android:layout_width="389dp"
@@ -46,20 +119,6 @@
         app:layout_constraintStart_toStartOf="@+id/cardView_avatar"
         app:layout_constraintTop_toBottomOf="@+id/cardView_avatar" />
 
-    <Button
-        android:id="@+id/button_translategame"
-        android:layout_width="170dp"
-        android:layout_height="271dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="27dp"
-        android:background="@drawable/back_button_reg_log"
-        android:paddingTop="180dp"
-        android:text="Перевод"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/button_trenning"
-        app:layout_constraintTop_toBottomOf="@+id/button_trenning" />
 
     <Button
         android:id="@+id/button_truegame"
@@ -79,15 +138,14 @@
         android:id="@+id/button_top100"
         android:layout_width="145.29dp"
         android:layout_height="36dp"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="344dp"
+        android:background="@drawable/back_top100_button"
         android:text="ТОП"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:background="@drawable/back_top100_button"
-        app:layout_constraintEnd_toStartOf="@+id/button_truegame"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toEndOf="@+id/button_translategame"
+        app:layout_constraintEnd_toEndOf="@+id/button_truegame"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/CardView_Button_translate"
         app:layout_constraintTop_toBottomOf="@+id/button_trenning" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
