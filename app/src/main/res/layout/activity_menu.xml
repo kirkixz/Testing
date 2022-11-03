@@ -7,7 +7,11 @@
     android:background="@drawable/background_main"
     tools:context=".Menu_Activity">
 
+    <!--- Поменять шрифты -->
 
+<!--- avatar -->
+    <!--- avatar сюда входить фотка и панель с именем, очками и копкой выйти -->
+    <!--- cardView_avatar добавить функцию клика, которая будет перессылать на экран смены фото и имени -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_avatar"
         android:layout_width="388dp"
@@ -29,40 +33,112 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/avatar_e" />
 
+
+
+        <!--- добавить выплывающие окно смены языка -->
+
+
+
+        <!--- profile_info_card -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_info"
+                android:layout_width="360dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/back_profile_info" />
+                <!--- profile info -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/name_profile"
+                        android:layout_width="227dp"
+                        android:layout_height="27dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="\@Turbo_Yojik"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_scores"
+                        android:layout_width="229dp"
+                        android:layout_height="19dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Счет: ----"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/name_profile"
+                        app:layout_constraintTop_toBottomOf="@+id/name_profile" />
+
+                    <!--- button_exit -->
+                    <!--- Придумать куда чел будет кликать -->
+                    <!--- придумать контейнер -->
+                    <!--- Поменять айдишники -->
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="54dp"
+                        android:layout_height="19dp"
+                        android:layout_marginStart="36dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Log out"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/name_profile"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="19dp"
+                        android:layout_marginStart="3dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.51"
+                        app:srcCompat="@drawable/icon_exit" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </androidx.cardview.widget.CardView>
 
+    <!--- translate game -->
+    <!--- Добавить метод клика на translate_button -->
     <androidx.cardview.widget.CardView
-        android:id="@+id/CardView_Button_translate"
+        android:id="@+id/translate_button"
         android:layout_width="168dp"
         android:layout_height="275dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="27dp"
         android:background="@drawable/back_button_reg_log"
+        android:visibility="visible"
         app:cardCornerRadius="10dp"
-        app:layout_constraintStart_toStartOf="@+id/button_trenning"
-        app:layout_constraintTop_toBottomOf="@+id/button_trenning">
+        app:layout_constraintStart_toStartOf="@+id/trainning_button"
+        app:layout_constraintTop_toBottomOf="@+id/trainning_button">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <!--            <Button-->
-            <!--                android:id="@+id/button_translategame"-->
-            <!--                android:layout_width="169dp"-->
-            <!--                android:layout_height="274dp"-->
-            <!--                android:background="@drawable/back_button_reg_log"-->
-            <!--                android:paddingTop="180dp"-->
-            <!--                android:text="Перевод"-->
-            <!--                android:textAllCaps="false"-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:textSize="20sp"-->
-            <!--                android:visibility="gone"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintHorizontal_bias="0.0"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -100,52 +176,136 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button_trenning"
-        android:layout_width="389dp"
+    <!--- trainnig game(slovar) -->
+    <!--- Добавить метод клика на trainnig_button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/trainning_button"
+        android:layout_width="388dp"
         android:layout_height="60dp"
         android:layout_marginTop="17dp"
-        android:background="@drawable/back_button_reg_log"
-        android:text="Подготовка"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView_avatar"
         app:layout_constraintStart_toStartOf="@+id/cardView_avatar"
-        app:layout_constraintTop_toBottomOf="@+id/cardView_avatar" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView_avatar">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_truegame"
-        android:layout_width="170dp"
-        android:layout_height="271dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/back_button_reg_log"
-        android:paddingTop="180dp"
-        android:text="Правда?"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/button_trenning"
-        app:layout_constraintTop_toBottomOf="@+id/button_trenning" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_button_reg_log" />
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="104dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Подготовка"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.521" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="104dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.547"
+                app:srcCompat="@drawable/icon_trainning" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--- true? game button -->
+    <!--- Добавить метод клика на true_button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/true_button"
+        android:layout_width="168dp"
+        android:layout_height="275dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="4dp"
+        app:cardCornerRadius="10dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/trainning_button"
+        app:layout_constraintTop_toBottomOf="@+id/trainning_button">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/back_button_reg_log" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Правда?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:layout_constraintVertical_bias="0.383"
+                app:srcCompat="@drawable/icon_true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--- Кнопка пересылающиая на окно ТОП -->
+    <!--- Добавить метод клика на button_top100 -->
     <Button
         android:id="@+id/button_top100"
         android:layout_width="145.29dp"
         android:layout_height="36dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/back_top100_button"
         android:text="ТОП"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/button_truegame"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@+id/CardView_Button_translate"
-        app:layout_constraintTop_toBottomOf="@+id/button_trenning" />
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/true_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
