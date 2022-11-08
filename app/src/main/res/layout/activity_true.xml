@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".True_Activity"
+    android:background="@drawable/background_main">
+
+    <!-- менять шрифты -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="290dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Это одно и тоже слово, но на разных языках?"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_true_firstWord"
+        android:layout_width="181dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="95dp"
+        android:background="@drawable/back_white"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:text="英語"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView_true_secondWord"
+        android:layout_width="181dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/back_white"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:text="Англиский"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_true_firstWord" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="109dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/back_button_reg_log"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="Да"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView_true_secondWord" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="109dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/back_button_reg_log"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="Нет"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView_true_secondWord" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
+        android:text="Выйти из игры"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+</androidx.constraintlayout.widget.ConstraintLayout>
